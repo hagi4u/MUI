@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------------
-//  PATH : ../../../src/scss/
+//  PATH : ../../../scss/
 //
 //  ###_main.scss 파일을 실제 사용할 파일 명으로 변경 후 html 에서 href 시킴.
 //
@@ -16,10 +16,10 @@
 //-------------------------------------------------------------------------------------------------
 
 // ##Base
-@import '../../src/scss/base/variables';
-@import '../../src/scss/base/mixins';
-@import '../../src/scss/base/extends';
-@import '../../src/scss/base/reset';
+@import '../../scss/base/variables';
+@import '../../scss/base/mixins';
+@import '../../scss/base/extends';
+@import '../../scss/base/reset';
 
 // ##Customize Variables
 $min-width : 951px;
@@ -28,15 +28,15 @@ $design-width : 2560px;
 $root-em : 24px;
 
 // ##Components
-@import '../../src/scss/components/buttons';
-@import '../../src/scss/components/embed';
-@import '../../src/scss/components/form';
-@import '../../src/scss/components/typography';
+@import '../../scss/components/buttons';
+@import '../../scss/components/embed';
+@import '../../scss/components/form';
+@import '../../scss/components/typography';
 
 // ##Layout
-@import '../../src/scss/layout/grid';
-@import '../../src/scss/layout/common';
+@import '../../scss/layout/grid';
+@import '../../scss/layout/common';
 
 // ##Modules
-@import '../../src/scss/modules/modal';
-@import '../../src/scss/modules/animations';
+@import '../../scss/modules/modal';
+@import '../../scss/modules/animations';
