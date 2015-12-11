@@ -44,7 +44,7 @@ try{
     /*
     ** @desc: 키보드로 숫자만 입력
     */
-    $target = $('input[data-input="tel"]');
+    var $target = $('input[data-input="tel"]');
     $target.keypress(function(e){
       var charCode = (event.which) ? event.which : event.keyCode;
       if (charCode > 31 && (charCode < 48 || charCode > 57))
@@ -70,7 +70,7 @@ try{
     ** @desc: Input 클릭 시 Placeholder 내용이 사라짐
     */
     $('input').focusin(function(){
-      input = $(this);
+      var input = $(this);
       
       input.data('place-holder-text', input.attr('placeholder'));
       input.attr('placeholder', '');
@@ -80,7 +80,7 @@ try{
     ** @desc: Input 영역 외 클릭 시 Placeholder 내용이 노출 (내용이 비어있는 경우)
     */
     $('input').focusout(function(){
-      input = $(this);
+      var input = $(this);
       input.attr('placeholder', input.data('place-holder-text'));
     });
 
