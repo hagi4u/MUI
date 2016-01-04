@@ -51,7 +51,7 @@
 //
 // Get REM
 //
-@function calc-rem($target) {
+@function rem($target) {
     @return ($target / $root-em) * 1rem;
 }
 
@@ -305,18 +305,20 @@
 // ----------------------------------------------------------------------------------------------------
 // 게임 랜딩페이지 배경 설정
 // ----------------------------------------------------------------------------------------------------
-@mixin setPage($src, $height, $bg-color : #000){
+@mixin setPage($src, $height){
   position:relative;
   margin-left:auto;
   margin-right:auto;
-  background:$bg-color url(#{$src}) no-repeat center;
+  background-image:url(#{$src});
+  background-repeat:no-repeat;
+  background-position:center top;
   height:$height;
 }
 
 // ----------------------------------------------------------------------------------------------------
 // Convert to REM
 // ----------------------------------------------------------------------------------------------------
-@mixin rem($property, $px-values) {
+@mixin rem-fallback($property, $px-values) {
   // Convert the baseline into rems
   $baseline-rem: $root-em / 1rem;
   // Print the first line in pixel values

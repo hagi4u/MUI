@@ -26,13 +26,54 @@ try{
       return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
     };
 
+
+    /*
+    ** @method: disabledDefaultMouseEvents
+    ** @desc: 마우스 오른쪽 버튼 및 드래그 제한
+    ** @param: none;
+    ** @usage : window.attachEvent( "onload" , disabledDefaultMouseEvents );
+    */
+    var disabledDefaultMouseEvents = function(){
+      document.body.oncontextmenu = function (){ return false };
+      document.body.ondragstart = function (){ return false };
+      document.body.onselectstart = function (){ return false };
+    };
+
     return {
       getWindowWidth: getWindowWidth,
-      getWindowHeight: getWindowHeight
+      getWindowHeight: getWindowHeight,
+      disabledDefaultMouseEvents: disabledDefaultMouseEvents
     };
   })(mui, $);
 }catch(e){
   console.log(e);
 }finally{
   
+}
+
+/*
+** @method: requestAnimationFrame
+** @desc: Inherit Default Method for Cross-browsing
+*/
+if (!window.requestAnimationFrame) {
+window.requestAnimationFrame = (window.webkitRequestAnimationFrame ||
+                                                        window.mozRequestAnimationFrame ||
+                                                        window.msRequestAnimationFrame ||
+                                                        window.oRequestAnimationFrame ||
+                                                        function (callback) {
+                                                          return window.setTimeout(callback, 17 /*~ 1000/60*/);
+                                                        });
+}
+
+/*
+** @method: cancelAnimationFrame
+** @desc: Inherit Default Method for Cross-browsing
+*/
+if (!window.cancelAnimationFrame) {
+  window.cancelAnimationFrame = (window.cancelRequestAnimationFrame ||
+                                                       window.webkitCancelAnimationFrame || window.webkitCancelRequestAnimationFrame ||
+                                                       window.mozCancelAnimationFrame || window.mozCancelRequestAnimationFrame ||
+                                                       window.msCancelAnimationFrame || window.msCancelRequestAnimationFrame ||
+                                                       window.oCancelAnimationFrame || window.oCancelRequestAnimationFrame ||
+                                                       window.clearTimeout);
 }

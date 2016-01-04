@@ -15,7 +15,7 @@ try{
           $btnModalBack = $('[data-history-back]'),
           $el;
 
-    var ref = false,
+    var ref = null,
           tmpPos = 0,
           openMotion = '';
 
@@ -71,11 +71,12 @@ try{
     var openModal = function (id){
       $el = $('#'+id);
 
-      if(typeof ref !== "undefined"){
+      if(typeof ref === "undefined"){
         /*
         ** @desc
         ** 레이어 팝업 1 에서 2로 바로 갈 경우, 1의 History 를 기억해야 함
         ** 현재는 바로 전 단계만 이동하는 프로세스 (3단계 이상 일 경우 추적 X, history 배열 사용 해야 함)
+        ** 16.01.04 추가 > ref에 대한 기능을 다시 체크
         */
         $('[data-rel="back"]', $el).attr('data-target', ref);
         /*
@@ -180,6 +181,12 @@ try{
       e.preventDefault();
 
       if(typeof refTarget !== "undefined"){
+        if(refTarget === "false"){
+          closeModal(target);
+
+          return true;
+        }
+
         $(this).closest('[data-role="modal"]').hide();
         $(this).removeAttr('data-target');
 

@@ -5,6 +5,11 @@
 try{
   mui.ajax = (function(mui, $, undefined){
     "use strict";
+
+    /*
+    ** @desc: jQuery Config (IE Cache Issues)
+    */
+    $.ajaxSetup({ cache: false });
     
     var config = {
       url : '',

@@ -3,11 +3,17 @@
 // # 글꼴 정의, 글꼴 정렬, 글꼴 숨김, 말줄임 등등 모든 타이포에 관련 된 스타일
 // ----------------------------------------------------------------------------------------------------
 // ##언어별 폰트 설정
+/*
 :lang(zh) {
   font-family:"SimHei", "Hiragino Sans GB", "LiHei Pro Medium", arial, sans-serif
 }
 :lang(ko) {
   font-family:"Nanum Gothic", "Open Sans", "Malgun Gothic", Arial, Helvetica, sans-serif
+}
+*/
+// ##Hn 태그 사용 시 여백 방지용 (heading)
+.heading{
+  @extend %no-margin;
 }
 
 // ##필요에 따른 글자 정렬 (Atomic CSS 형태)
