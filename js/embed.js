@@ -5,7 +5,6 @@
 try{
 	mui.embed = {};
 	mui.embed.flash = (function(mui, $, undefined){
-		"use strict";
 		function insert($dom, swf, width, height, bgcolor, id, flashvars){
 			var strFlashTag = new String();
 

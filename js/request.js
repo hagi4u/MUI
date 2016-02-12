@@ -13,4 +13,4 @@ var Request=function(){
     }
     return rtnval;
   }
-}
+};

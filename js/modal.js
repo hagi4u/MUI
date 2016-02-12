@@ -88,9 +88,10 @@ try{
       /*
       ** @desc: 팝업 오픈 시 현재 Y값을 저장, fixed position이 된 viewport에다가 fake로 페이지가 내려 온 것처럼 보이게 함 (페이스북 스타일)
       */
+
       tmpPos = $(window).scrollTop();
       $('#viewport').css('top', tmpPos * -1);
-      
+
       if(mui.modal.openMotion === '')
         mui.modal.openMotion = 'modal-scale';
 
@@ -101,7 +102,7 @@ try{
         });
         
         if($el.attr('data-view') == 'full'){
-          $('body').css('overflow','hidden');
+          //$('body').css('overflow','hidden');
           $('.modal-content', $el).css({
             'margin-top': 0,
             'margin-left': 0
@@ -122,11 +123,10 @@ try{
               });
             }, 100);
           }
-          $('body').append($modalBackdrop);
           $modalBackdrop.height($(document).innerHeight()).show();
         }
         
-        $('body').addClass('modal-open');
+        $('body').append($modalBackdrop).addClass('modal-open');
 
         $el.removeAttr('style').fadeIn('fast');
       }
@@ -143,17 +143,36 @@ try{
       $el.hide();
 
       $('.modal-content').removeClass(mui.modal.openMotion);
+      /*
+      @date: 16.01.06
+      @anchor: 정명학
+      @창 닫을 시 구분없이 모달 창 종류와 관계없이 공통적인 액션을 취함
       if(ref !== 'modal') {
         $('body .modal-backdrop').fadeOut(0, function(){
           $('body').removeClass('modal-open').removeAttr('style');
 
            $('#viewport').removeAttr('style');
            $(window).scrollTop(tmpPos);
+
          });
         $(this).remove();
       } else if( ref === 'modal'){
 
       }
+
+      if($('body').hasClass('modal-open'))
+        $('body').removeClass('modal-open').css('overflow', 'auto');
+      */
+
+      $('body .modal-backdrop').fadeOut(100, function(){
+        $('body').removeClass('modal-open');
+
+        $('#viewport').removeAttr('style');
+        $(window).scrollTop(tmpPos);
+      });
+
+      //$(this).remove();
+
       ref = false;
     };
 
@@ -167,6 +186,14 @@ try{
       e.preventDefault();
 
       ref = $(this).parents('[data-role="modal"]').attr('id');
+
+      /*
+      ** @date: 160106
+      ** @bugfix: openModal 함수에서 undefined 다 계속 걸려 closeModal 함수가 실행되어 tmpPos 값 갱신이 되지않아 먼저 null 값으로 type 을 object 로 변경
+      */
+      if(typeof ref === "undefined")
+        ref = null;
+
       openModal(target);
     });
 

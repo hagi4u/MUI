@@ -39,7 +39,6 @@ try{
           clearTimeout($this.data('scrollTimeout'));
         
         $this.data( 'scrollTimeout', setTimeout(callback, timeout) );
-
       });
     };
 
@@ -57,12 +56,14 @@ try{
       /*
       ** @desc: target 이 1개 이상일 경우 , 로 문자열 자른 후 innerHeight 을 더함
       */
-      if(typeof avoidTarget !== undefined){
+      if(typeof avoidTarget !== "undefined"){
         if(avoidTarget.indexOf(',') > 0){
           var arr = avoidTarget.split(',');
           for(var i=0; i<arr.length; i++){
             value -= $(arr[i]).outerHeight();
           }
+        } else {
+          value -= $(avoidTarget).outerHeight(); 
         }
       }
 

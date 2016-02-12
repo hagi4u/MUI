@@ -294,11 +294,20 @@
 // ----------------------------------------------------------------------------------------------------
 // transition
 // ----------------------------------------------------------------------------------------------------
-@mixin transition($type, $time, $ease){
-  -webkit-transition:$type $time $ease;
-  -moz-transition:$type $time $ease;
-  -ms-transition:$type $time $ease;
-  transition:$type $time $ease;
+@mixin transition($property){
+  -webkit-transition:$property;
+  -moz-transition:$property;
+  -ms-transition:$property;
+  transition:$property;
+}
+// ----------------------------------------------------------------------------------------------------
+// transition-delay
+// ----------------------------------------------------------------------------------------------------
+@mixin transition-delay($time){
+  -webkit-transition-delay:$time ;
+  -moz-transition-delay:$time ;
+  -ms-transition-delay:$time ;
+  transition-delay:$time;
 }
 
 
