@@ -59,6 +59,7 @@ template {
 }
 
 a {
+  color:inherit;
   background-color: transparent;
   text-decoration: none;
 }
@@ -120,7 +121,8 @@ svg:not(:root) {
 }
 
 figure {
-  margin: 1em 40px;
+  //margin: 1em 40px;
+  margin:0;
 }
 
 hr {
@@ -239,7 +241,27 @@ th {
   padding: 0;
 }
 
+img{
+  max-width:100%;
+  
+  line-height:1;
+  vertical-align: top;
+}
+
 fieldset  img,
 label img{
   width:100%
+}
+
+// --------------------
+// Customize
+// --------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin:0;
+  padding:0;
 }

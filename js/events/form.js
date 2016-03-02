@@ -84,6 +84,16 @@ try{
       input.attr('placeholder', input.data('place-holder-text'));
     });
 
+    /*
+    ** @desc: Input 영역에서 엔터키 입력 시 해당 form 이 submit 
+    ** @date: 2015.12.24 
+    */      
+    $("input").keypress(function(event) {
+      if (event.which == 13) {
+          $(this).closest("form").submit();
+      }
+    });
+
    })(mui, $, undefined);
 }catch(e){
   console.log(e);
