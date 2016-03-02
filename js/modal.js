@@ -100,6 +100,7 @@ try{
         });
         
         if($el.attr('data-view') == 'full'){
+          
           $('body').css('overflow','hidden');
           $('.modal-content', $el).css({
             'margin-top': 0,
