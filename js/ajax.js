@@ -1,22 +1,28 @@
-/*
-** @Domain: Ajax
-** @Require: jQuery
-*/
+/**
+ * mui.ajax Components
+ * @namespace mui.ajax
+ * @inner
+ */
 try{
   mui.ajax = (function(mui, $, undefined){
     "use strict";
 
-    /*
-    ** @desc: jQuery Config (IE Cache Issues)
-    */
     $.ajaxSetup({ cache: false });
-    
+
     var config = {
       url : '',
       type : '',
       param : {}
     };
 
+    /**
+     * @function mui.ajax.call
+     * @param  {String} type      HTTP Connection 종류(POST/GET/OPTIONS/PUT/DELETE)
+     * @param  {String} url         서버프로그램 URL
+     * @param  {Object} param  AJAX Options
+     * @param  {Function} success Success Callback Function
+     * @param  {Function} failed Fail Callback Function
+     */
     var call = function (type ,url, param, callback, errCallback){
 
       this.type = type;

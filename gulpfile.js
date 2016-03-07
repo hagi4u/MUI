@@ -94,6 +94,19 @@ var changePathSrc = function(value){
 
 }
 
+/**
+ * Labs: JSDoc
+ */
+/*
+var jsdoc = require('gulp-jsdoc3');
+var template = require('gulp-template');
+
+gulp.task('jsdoc', function(){
+  var config = require('./jsdoc.conf.json');
+  gulp.src(['./js/'], {read: false})
+        .pipe(jsdoc(config));
+});
+*/
 
 // ------------------------------------------------- Task Started! -------------------------------------------------------- //
 

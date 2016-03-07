@@ -1,3 +1,4 @@
+/** @namespace */
 var mui = window.mui || {};
 var console = window.console || {
   log: function() {}
