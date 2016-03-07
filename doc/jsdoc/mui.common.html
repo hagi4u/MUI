@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Namespaces</title>
+	<title>Documentation Namespace: common</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -77,13 +77,15 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Namespaces</h1>
+	<h1 class="page-title">Namespace: common</h1>
 <section>
 
 <header>
     
         <h2>
+            <span class="ancestors"><a href="mui.html">mui</a>.</span>
         
+        common
         </h2>
         
     
@@ -93,6 +95,8 @@
 <article>
     <div class="container-overview">
     
+        
+            <div class="description">공통적으로 사용 할 함수 모음 (추후 카테고라이징 예정)</div>
         
 
         
@@ -144,36 +148,457 @@
     
 
     
-        <h3 class="subsection-title">Classes</h3>
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
 
         <dl>
-            <dt><a href="Request.html">Request</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt>
+    <h4 class="name" id=".disabledDefaultMouseEvents"><span class="type-signature">&lt;static> </span>disabledDefaultMouseEvents()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        마우스 오른쪽 버튼 및 드래그 제한
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
         
-            <dt><a href="Sequence.html">Sequence</a></dt>
-            <dd></dd>
+    <pre class="sunlight-highlight-javascript">window.attachEvent( &quot;onload&quot; , disabledDefaultMouseEvents );</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".getWindowHeight"><span class="type-signature">&lt;static> </span>getWindowHeight()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        브라우저 높이 값 리턴 (IE, FF, Chrome)
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    브라우저 높이
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Int</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".getWindowWidth"><span class="type-signature">&lt;static> </span>getWindowWidth()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        브라우저 넓이 값 리턴 (IE, FF, Chrome)
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    브라우저 넓이
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Int</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".isDomain"><span class="type-signature">&lt;static> </span>isDomain(url)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        URL 검증
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">검증 할 URL</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    검증 결과
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
         </dl>
-    
-
-    
-
-    
-        <h3 class="subsection-title">Namespaces</h3>
-
-        <dl>
-            <dt><a href="namespaces.html#mui"><a href="mui.html">mui</a></a></dt>
-            <dd></dd>
-        
-            <dt><a href="namespaces.html#mui.ajax"><a href="mui.ajax.html">ajax</a></a></dt>
-            <dd></dd>
-        
-            <dt><a href="namespaces.html#mui.common"><a href="mui.common.html">common</a></a></dt>
-            <dd></dd>
-        </dl>
-    
-
-    
-
     
 
     
@@ -221,7 +646,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on 2016-03-07T21:57:55+09:00
+		on 2016-03-07T21:57:56+09:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

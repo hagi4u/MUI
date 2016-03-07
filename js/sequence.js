@@ -28,7 +28,8 @@ function Sequence(width, height, scene, speed, selector, isReplay) {
 };
 
 /**
- * @function produce
+ * 이미지 정면 전환에 대한 처리 함수
+ * @function
  * @private
  */
 Sequence.prototype.procedure = function() {
