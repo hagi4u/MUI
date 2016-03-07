@@ -96,17 +96,16 @@ var changePathSrc = function(value){
 
 /**
  * Labs: JSDoc
+ * MacOS Compile JSDoc
  */
-/*
 var jsdoc = require('gulp-jsdoc3');
-var template = require('gulp-template');
 
-gulp.task('jsdoc', function(){
+gulp.task('jsdoc', function(cb){
   var config = require('./jsdoc.conf.json');
+
   gulp.src(['./js/'], {read: false})
-        .pipe(jsdoc(config));
+        .pipe(jsdoc(config,cb));
 });
-*/
 
 // ------------------------------------------------- Task Started! -------------------------------------------------------- //
 

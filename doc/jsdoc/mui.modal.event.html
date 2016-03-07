@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Class: Request</title>
+	<title>Documentation Namespace: modal</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,7 +33,7 @@
 			<li class="dropdown">
 				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="mui.html">mui</a></li><li><a href="mui.ajax.html">mui.ajax</a></li><li><a href="mui.common.html">mui.common</a></li><li><a href="mui.modal.html">mui.modal</a></li>
+					<li><a href="mui.html">mui</a></li><li><a href="mui.ajax.html">mui.ajax</a></li><li><a href="mui.common.html">mui.common</a></li><li><a href="mui.html#.modal">mui.modal</a></li>
 				</ul>
 			</li>
 			
@@ -47,7 +47,7 @@
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="mui.modal.html#.event:%255B%25EA%25B0%259C%25EB%25B0%259C%25EC%25A4%2591%255D%25EB%258B%25A4%25EC%25A4%2591%25EB%25AA%25A8%25EB%258B%25AC%25EC%25B0%25BD%25EB%258B%25AB%25EA%25B8%25B0">mui.modal.event:[개발 중]다중 모달창 닫기</a></li><li><a href="mui.modal.html#.event:%255B%25EA%25B0%259C%25EB%25B0%259C%25EC%25A4%2591%255D%25EB%25A0%2588%25EC%259D%25B4%25EC%2596%25B4%25ED%258C%259D%25EC%2597%2585%25EC%25A0%2584%25ED%2599%2598">mui.modal.event:[개발 중]레이어 팝업 전환</a></li><li><a href="mui.modal.html#.event:%25EB%25AA%25A8%25EB%258B%25AC%25EC%25B0%25BD%25EB%258B%25AB%25EA%25B8%25B0">mui.modal.event:모달창 닫기</a></li><li><a href="mui.modal.html#.event:%25EB%25AA%25A8%25EB%258B%25AC%25EC%25B0%25BD%25EC%2597%25B4%25EA%25B8%25B0">mui.modal.event:모달창 열기</a></li><li><a href="mui.modal.html#.event:%25EB%25B8%258C%25EB%259D%25BC%25EC%259A%25B0%25EC%25A0%2580%25ED%2581%25AC%25EA%25B8%25B0%25EB%25B3%2580%25EA%25B2%25BD">mui.modal.event:브라우저 크기 변경</a></li>
+					<li><a href="Hurl.html#event:snowball">Hurl#event:snowball</a></li>
 				</ul>
 			</li>
 			
@@ -84,13 +84,15 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: Request</h1>
+	<h1 class="page-title">Namespace: modal</h1>
 <section>
 
 <header>
     
         <h2>
-        Request
+            <span class="ancestors"><a href="mui.html">mui</a>.</span>
+        
+        modal
         </h2>
         
     
@@ -101,39 +103,14 @@
     <div class="container-overview">
     
         
-<hr>
-<dt>
-    <h4 class="name" id="Request"><span class="type-signature"></span>new Request()</h4>
-    
-    
-</dt>
-<dd>
+            <div class="description">mui.modal Components</div>
+        
 
-    
-    <div class="description">
-        Request Querystring Parser
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
+        
 <dl class="details">
     
 
 	
-	<dt class="tag-version method-doc-label method-doc-details-label">Version:</dt>
-	<dd class="tag-version">
-		<ul class="dummy">
-			<li>0.1</li>
-		</ul>
-	</dd>
-	
 
 	
 
@@ -152,21 +129,7 @@
 	
 
 	
-	<dt class="tag-copyright method-doc-label method-doc-details-label">Copyright:</dt>
-	<dd class="tag-copyright">
-		<ul class="dummy">
-			<li>2016 Jeong Myoung Hak</li>
-		</ul>
-	</dd>
-	
 
-	
-	<dt class="tag-license method-doc-label method-doc-details-label">License:</dt>
-	<dd class="tag-license">
-		<ul class="dummy">
-			<li>http://opensource.org/licenses/MIT MIT</li>
-		</ul>
-	</dd>
 	
 
 	
@@ -183,21 +146,7 @@
 </dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
+        
     
     </div>
 
@@ -220,7 +169,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="getParameter"><span class="type-signature"></span>getParameter(name)</h4>
+    <h4 class="name" id=".close"><span class="type-signature">&lt;static> </span>close(id)</h4>
     
     
 </dt>
@@ -228,7 +177,7 @@
 
     
     <div class="description">
-        Querystring 파싱
+        모달창 닫기
     </div>
     
 
@@ -263,7 +212,7 @@
 
         <tr>
             
-                <td class="name"><code>name</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
@@ -280,7 +229,7 @@
 
             
 
-            <td class="description last">Field 이름</td>
+            <td class="description last">DOM ID</td>
         </tr>
 
     
@@ -340,11 +289,85 @@
     
 
     
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".getCloseButtonHeight"><span class="type-signature">&lt;private, static> </span>getCloseButtonHeight()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
     <h5>Returns:</h5>
     
             
 <div class="param-desc">
-    Field 에 대한 값
+    getVerticalMiddleValue 에서 모달 닫기버튼이 모달영역 밖에 위치 할 경우, 그 높이 값
 </div>
 
 
@@ -355,7 +378,7 @@
     </dt>
     <dd>
         
-<span class="param-type">String</span>
+<span class="param-type">Float</span>
 
 
 
@@ -364,6 +387,432 @@
 
 
         
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".getHorizontalMiddleValue"><span class="type-signature">&lt;private, static> </span>getHorizontalMiddleValue()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    모달 영역이 브라우저 창 넓이 기준으로 중앙에 위치하기 위한 값
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Float</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".getVerticalMiddleValue"><span class="type-signature">&lt;private, static> </span>getVerticalMiddleValue()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    모달 영역이 브라우저 창 높이 기준으로 중앙에 위치하기 위한 값
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Float</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".isSmallWindow"><span class="type-signature">&lt;private, static> </span>isSmallWindow()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        모달 영역이 브라우저 보다 높이값이 크면 모달 영역이 하단에 붙여서 엉성하게 나오는 것에 대한 처리를 하기 위함
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    모달 영역의 높이값이 브라우저 창보다 큰지 안큰지
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".open"><span class="type-signature">&lt;static> </span>open(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        모달창 오픈
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">DOM ID</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 </dd>
@@ -416,7 +865,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on 2016-03-08T00:13:39+09:00
+		on 2016-03-07T23:46:24+09:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
