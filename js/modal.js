@@ -183,7 +183,7 @@ try {
     /**
      * 모달 레이어 팝업 열기
      *
-     * @event 모달창 열기
+     * @event [a] 모달창 열기
      * @memberOf mui.modal
      * @property {String} href Target ID
      * @example
@@ -208,7 +208,7 @@ try {
     /**
      * 모달 레이어 팝업 닫기
      *
-     * @event 모달창 닫기
+     * @event [a] 모달창 닫기
      * @memberOf mui.modal
      * @property {String} href Target ID
      * @example
@@ -240,7 +240,7 @@ try {
 
     /**
      * 다중 모달 레이어 팝업 이용 시 필요 한 data-target 속성의 꼬임방지를 위한 것
-     * @event [개발 중]다중 모달창 닫기
+     * @event [develop] 다중 모달창 닫기
      * @memberOf mui.modal
      * @example
      * <a href="#" class="modal__close"></a>
@@ -250,7 +250,7 @@ try {
     });
 
     /**
-     * @event [개발 중]레이어 팝업 전환
+     * @event [develop] 레이어 팝업 전환
      * @memberOf mui.modal
      */
     $btnModalBack.on('click', function() {
@@ -263,7 +263,7 @@ try {
     });
 
     /**
-     * @event 브라우저 크기 변경
+     * @event [window] 브라우저 크기 변경
      * @memberOf mui.modal
      * @description 1. 현재 오픈 된 모달 영역이 창 크기가 조절 될 시에도 중앙 위치에 맞춰지게 설정 <br>
      * 2. 브라우저 높이가 문서 높이보다 작은경우 모달 암막높이를 브라우저 높이만큼 조절
