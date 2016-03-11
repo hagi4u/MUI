@@ -2,15 +2,22 @@
  ** @Domain: Utility
  ** @Require: jQuery
  */
+
 try {
+  /**
+   * mui.util Components <br/>
+   * 일부 재 사용성 있는 기능들에 대한 집합
+   * @namespace mui.util
+   * @inner
+   */
   mui.util = (function(mui, $, undefined) {
     "use strict";
     var _doScroll = false;
-
-    /*
-     ** @method: ie8PNGFix
-     ** @desc: 익스플로러 8 이하에서 그림자가 있는 PNG 파일 로딩 시 깨짐 현상 방지
-     ** @param: $el (jQuery DOM)
+    
+    /**
+     * 익스플로러 8 이하에서 그림자가 있는 PNG 파일 로딩 시 깨짐 현상 방지
+     * @function mui.util.ie8PNGFix
+     * @param  {$DOM} $DOM 이미지 태그
      */
     var ie8PNGFix = function($el) {
       var c = [];
@@ -23,10 +30,11 @@ try {
       });
     };
 
-    /*
-     ** @method: imageLoader
-     ** @desc: 브라우저에 이미지 로딩 해 주는 기능
-     ** @param: Array (이미지 경로)
+    /**
+     * 이미지 경로에 대해 연결 시켜주는 기능\
+     * @function mui.util.imageLoader
+     * @param  {Array} arr 이미지 URL
+     * @return {Arra} Image Array
      */
     var imageLoader = function(arr) {
       var length = arr.length;
@@ -40,10 +48,9 @@ try {
       return imgArr;
     };
 
-    /*
-     ** @method: disableScrolling
-     ** @desc: 브라우저 스크롤 이벤트 차단 (PC/모바일)
-     ** @param: none
+    /**
+     * 브라우저 스크롤 이벤트 차단
+     * @function mui.util.disableScrolling
      */
     var disableScrolling = function() {
       $(window).on("mousewheel.disableScroll DOMMouseScroll.disableScroll touchmove.disableScroll", function(e) {
@@ -61,10 +68,9 @@ try {
       });
     };
 
-    /*
-     ** @method: enableScrolling
-     ** @desc: 브라우저 스크롤 이벤트 활성화 (PC/모바일)
-     ** @param: none
+    /**
+     * 브라우저 스크롤 이벤트 활성화 (PC/모바일)
+     * @function mui.util.enableScrolling
      */
     var enableScrolling = function() {
       $(window).off(".disableScroll");
@@ -72,10 +78,11 @@ try {
       _doScroll = false;
     };
 
-    /*
-     ** @method: goToPosition
-     ** @desc: Y값으로 위치 이동
-     ** @param: value(int) callback(function)
+    /**
+     * Y값으로 위치 이동
+     * @function mui.util.goToPosition
+     * @param  {Int}   value    해당 위치로 이동
+     * @param  {Function} callback 위치 이동 후 Callback
      */
     var goToPosition = function(value, callback) {
 
@@ -94,37 +101,42 @@ try {
       });
     };
 
-    /*
-     ** @method: getBetween
-     ** @desc: 최대, 최소 값 사이에 포함되는 지 확인
-     ** @param: x(int), minimum(int), maximum(int)
+    /**
+     * 최대 / 최소 값 사이에 X가 포함되는지 확인
+     * @function mui.util.getBetween
+     * @param  {Int} x   비교 될 값
+     * @param  {Int} min 비교 될 최소 값
+     * @param  {Int} max 비교 될 최대 값
+     * @return {Boolean}
      */
     var getBetween = function(x, min, max) {
       return x >= min && x <= max;
     };
 
-    /*
-     ** @method: getOffset
-     ** @desc: 엘리먼트의 Y 위치값
-     ** @param: el($selector)
+    /**
+     * 엘리먼트가 문서에서 위치 한 최초 지점의 Y값
+     * @param  {$DOM} $el 값을 반환 할 엘리먼트
+     * @return {Int} 위치 값
      */
     var getOffset = function($el) {
       return $el.offset().top;
     };
 
-    /*
-     ** @method: getHeight
-     ** @desc: 엘리먼트의 높이
-     ** @param: el($selector)
+    /**
+     * 엘리먼트의 높이
+     * @param  {$DOM} $el 값을 반환 할 엘리먼트
+     * @return {Int}     높이값
      */
     var getHeight = function($el) {
       return $el.innerHeight();
     };
 
-    /*
-     ** @method: setBackground
-     ** @desc: 엘리먼트 크기에 비례 한 배경 오브젝트 설정
-     ** @param: $dom, int, int, int
+    /**
+     * 엘리먼트 크기에 비례 한 배경 오브젝트 비율 설정
+     * @param {$DOM} $el      비율을 설정 할 엘리먼트
+     * @param {Int} wOrigin  엘리먼트의 넓이
+     * @param {Int} hOrigin  엘리먼트의 높이
+     * @param {Int} minWidth 엘리먼트의 최소 넓이
      */
     var setBackground = function($el, wOrigin, hOrigin, minWidth) {
       var
@@ -165,5 +177,4 @@ try {
 } catch (e) {
   console.log(e);
 } finally {
-
 }

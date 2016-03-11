@@ -1,11 +1,11 @@
-/**
- * mui.modal Components <br/><br/>
- * `private` 키워드가 들어 가 있으면 실행 불가 <br/>
- * `static` 키워드가 들어 가 있으면 실행 가능
- * @namespace  mui.modal
- * @inner
- */
 try {
+  /**
+   * mui.modal Components <br/><br/>
+   * `private` 키워드가 들어 가 있으면 실행 불가 <br/>
+   * `static` 키워드가 들어 가 있으면 실행 가능
+   * @namespace  mui.modal
+   * @inner
+   */
   mui.modal = (function(mui, $, undefined) {
     "use strict";
 

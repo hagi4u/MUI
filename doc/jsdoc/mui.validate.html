@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Namespace: modal</title>
+	<title>Documentation Namespace: validate</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -84,7 +84,7 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Namespace: modal</h1>
+	<h1 class="page-title">Namespace: validate</h1>
 <section>
 
 <header>
@@ -92,7 +92,7 @@
         <h2>
             <span class="ancestors"><a href="mui.html">mui</a>.</span>
         
-        modal
+        validate
         </h2>
         
     
@@ -103,7 +103,7 @@
     <div class="container-overview">
     
         
-            <div class="description">mui.modal Components <br/><br/>`private` 키워드가 들어 가 있으면 실행 불가 <br/>`static` 키워드가 들어 가 있으면 실행 가능</div>
+            <div class="description">mui.validate Components</div>
         
 
         
@@ -169,7 +169,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".close"><span class="type-signature">&lt;static> </span>close(id)</h4>
+    <h4 class="name" id=".checkbox"><span class="type-signature">&lt;static> </span>checkbox($el, e)</h4>
     
     
 </dt>
@@ -177,7 +177,7 @@
 
     
     <div class="description">
-        모달창 닫기
+        체크박스 검증
     </div>
     
 
@@ -212,13 +212,13 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>$el</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="String.html">String</a></span>
+<span class="param-type">$DOM</span>
 
 
 
@@ -229,7 +229,31 @@
 
             
 
-            <td class="description last">DOM ID</td>
+            <td class="description last">검증 할 체크박스</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>e</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">체크박스 이벤트</td>
         </tr>
 
     
@@ -289,383 +313,11 @@
     
 
     
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".getCloseButtonHeight"><span class="type-signature">&lt;private, static> </span>getCloseButtonHeight()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
     <h5>Returns:</h5>
     
             
 <div class="param-desc">
-    getVerticalMiddleValue 에서 모달 닫기버튼이 모달영역 밖에 위치 할 경우, 그 높이 값
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Float</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".getHorizontalMiddleValue"><span class="type-signature">&lt;private, static> </span>getHorizontalMiddleValue()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    모달 영역이 브라우저 창 넓이 기준으로 중앙에 위치하기 위한 값
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Float</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".getVerticalMiddleValue"><span class="type-signature">&lt;private, static> </span>getVerticalMiddleValue()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    모달 영역이 브라우저 창 높이 기준으로 중앙에 위치하기 위한 값
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Float</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".isSmallWindow"><span class="type-signature">&lt;private, static> </span>isSmallWindow()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        모달 영역이 브라우저 보다 높이값이 크면 모달 영역이 하단에 붙여서 엉성하게 나오는 것에 대한 처리를 하기 위함
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    모달 영역의 높이값이 브라우저 창보다 큰지 안큰지
+    검증여부
 </div>
 
 
@@ -693,7 +345,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".open"><span class="type-signature">&lt;static> </span>open(id)</h4>
+    <h4 class="name" id=".init"><span class="type-signature">&lt;static> </span>init($el, e)</h4>
     
     
 </dt>
@@ -701,7 +353,7 @@
 
     
     <div class="description">
-        모달창 오픈
+        폼 초기화
     </div>
     
 
@@ -736,13 +388,13 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>$el</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="String.html">String</a></span>
+<span class="param-type">$DOM</span>
 
 
 
@@ -753,7 +405,31 @@
 
             
 
-            <td class="description last">DOM ID</td>
+            <td class="description last">초기화 할 폼</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>e</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">해당 폼의 이벤트 (선택사항)</td>
         </tr>
 
     
@@ -817,19 +493,11 @@
     
 </dd>
 
-        </dl>
-    
-
-    
-
-    
-        <h3 class="subsection-title">Events</h3>
-
-        <dl>
+        
             
 <hr>
 <dt>
-    <h4 class="name" id=".event:%5Ba%5D%EB%AA%A8%EB%8B%AC%EC%B0%BD%EB%8B%AB%EA%B8%B0">[a] 모달창 닫기</h4>
+    <h4 class="name" id=".input"><span class="type-signature">&lt;static> </span>input($el, cond, e)</h4>
     
     
 </dt>
@@ -837,7 +505,7 @@
 
     
     <div class="description">
-        모달 레이어 팝업 닫기
+        입력 폼 검증
     </div>
     
 
@@ -847,16 +515,10 @@
 
     
     
+        <h5>Parameters:</h5>
+        
 
-    
-<dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -878,7 +540,31 @@
 
         <tr>
             
-                <td class="name"><code>href</code></td>
+                <td class="name"><code>$el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">$DOM</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">검증 할 입력 폼</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cond</code></td>
             
 
             <td class="type">
@@ -895,14 +581,41 @@
 
             
 
-            <td class="description last">Target ID</td>
+            <td class="description last">몇몇 설정 된 조건 (tel : 전화번호)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>e</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">입력 폼의 이벤트</td>
         </tr>
 
     
     </tbody>
 </table>
-</dl>
 
+    
+
+    
+<dl class="details">
     
 
 	
@@ -952,12 +665,30 @@
     
 
     
-
+    <h5>Returns:</h5>
     
-        <h5>Example</h5>
+            
+<div class="param-desc">
+    검증 여부
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
         
-    <pre class="sunlight-highlight-javascript">&lt;a href=&quot;#&quot; data-rel=&quot;back&quot;&gt;닫기&lt;/a&gt;</pre>
+<span class="param-type">Boolean</span>
 
+
+
+    </dd>
+</dl>
+
+
+        
 
     
 </dd>
@@ -966,7 +697,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".event:%5Ba%5D%EB%AA%A8%EB%8B%AC%EC%B0%BD%EC%97%B4%EA%B8%B0">[a] 모달창 열기</h4>
+    <h4 class="name" id=".radio"><span class="type-signature">&lt;static> </span>radio(name, e)</h4>
     
     
 </dt>
@@ -974,7 +705,7 @@
 
     
     <div class="description">
-        모달 레이어 팝업 열기
+        라디오 검증
     </div>
     
 
@@ -984,16 +715,10 @@
 
     
     
+        <h5>Parameters:</h5>
+        
 
-    
-<dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1015,7 +740,7 @@
 
         <tr>
             
-                <td class="name"><code>href</code></td>
+                <td class="name"><code>name</code></td>
             
 
             <td class="type">
@@ -1032,94 +757,37 @@
 
             
 
-            <td class="description last">Target ID</td>
+            <td class="description last">라디오 [name] 값</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>e</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">라디오 이벤트</td>
         </tr>
 
     
     </tbody>
 </table>
-</dl>
 
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">&lt;a href=&quot;#target&quot; data-toggle=&quot;modal&quot;&gt;모달창 오픈&lt;/a&gt;</pre>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".event:%5Bdevelop%5D%EB%8B%A4%EC%A4%91%EB%AA%A8%EB%8B%AC%EC%B0%BD%EB%8B%AB%EA%B8%B0">[develop] 다중 모달창 닫기</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        다중 모달 레이어 팝업 이용 시 필요 한 data-target 속성의 꼬임방지를 위한 것
-    </div>
-    
-
-    
-
-    
-
-    
     
 
     
@@ -1173,169 +841,39 @@
     
 
     
-
+    <h5>Returns:</h5>
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">&lt;a href=&quot;#&quot; class=&quot;modal__close&quot;&gt;&lt;/a&gt;</pre>
-
-
-    
-</dd>
-
-        
             
-<hr>
-<dt>
-    <h4 class="name" id=".event:%5Bdevelop%5D%EB%A0%88%EC%9D%B4%EC%96%B4%ED%8C%9D%EC%97%85%EC%A0%84%ED%99%98">[develop] 레이어 팝업 전환</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
+<div class="param-desc">
+    선택 된 라디오의 값 (없으면 false)
+</div>
 
 
 
-	
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="String.html">String</a></span>
 
-	
 
-	
 
-	
+    </dd>
 </dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
         
-            
-<hr>
-<dt>
-    <h4 class="name" id=".event:%5Bwindow%5D%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%ED%81%AC%EA%B8%B0%EB%B3%80%EA%B2%BD">[window] 브라우저 크기 변경</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        1. 현재 오픈 된 모달 영역이 창 크기가 조절 될 시에도 중앙 위치에 맞춰지게 설정 <br>2. 브라우저 높이가 문서 높이보다 작은경우 모달 암막높이를 브라우저 높이만큼 조절
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     
 </dd>
 
         </dl>
+    
+
+    
+
     
 </article>
 

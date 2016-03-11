@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Namespace: modal</title>
+	<title>Documentation Namespace: util</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -84,7 +84,7 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Namespace: modal</h1>
+	<h1 class="page-title">Namespace: util</h1>
 <section>
 
 <header>
@@ -92,7 +92,7 @@
         <h2>
             <span class="ancestors"><a href="mui.html">mui</a>.</span>
         
-        modal
+        util
         </h2>
         
     
@@ -103,7 +103,7 @@
     <div class="container-overview">
     
         
-            <div class="description">mui.modal Components <br/><br/>`private` 키워드가 들어 가 있으면 실행 불가 <br/>`static` 키워드가 들어 가 있으면 실행 가능</div>
+            <div class="description">mui.util Components <br/>일부 재 사용성 있는 기능들에 대한 집합</div>
         
 
         
@@ -169,7 +169,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".close"><span class="type-signature">&lt;static> </span>close(id)</h4>
+    <h4 class="name" id=".disableScrolling"><span class="type-signature">&lt;static> </span>disableScrolling()</h4>
     
     
 </dt>
@@ -177,7 +177,163 @@
 
     
     <div class="description">
-        모달창 닫기
+        브라우저 스크롤 이벤트 차단
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".enableScrolling"><span class="type-signature">&lt;static> </span>enableScrolling()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        브라우저 스크롤 이벤트 활성화 (PC/모바일)
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".getBetween"><span class="type-signature">&lt;static> </span>getBetween(x, min, max)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        최대 / 최소 값 사이에 X가 포함되는지 확인
     </div>
     
 
@@ -212,13 +368,13 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>x</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="String.html">String</a></span>
+<span class="param-type">Int</span>
 
 
 
@@ -229,7 +385,55 @@
 
             
 
-            <td class="description last">DOM ID</td>
+            <td class="description last">비교 될 값</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>min</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Int</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">비교 될 최소 값</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>max</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Int</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">비교 될 최대 값</td>
         </tr>
 
     
@@ -289,385 +493,9 @@
     
 
     
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".getCloseButtonHeight"><span class="type-signature">&lt;private, static> </span>getCloseButtonHeight()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
     <h5>Returns:</h5>
     
             
-<div class="param-desc">
-    getVerticalMiddleValue 에서 모달 닫기버튼이 모달영역 밖에 위치 할 경우, 그 높이 값
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Float</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".getHorizontalMiddleValue"><span class="type-signature">&lt;private, static> </span>getHorizontalMiddleValue()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    모달 영역이 브라우저 창 넓이 기준으로 중앙에 위치하기 위한 값
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Float</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".getVerticalMiddleValue"><span class="type-signature">&lt;private, static> </span>getVerticalMiddleValue()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    모달 영역이 브라우저 창 높이 기준으로 중앙에 위치하기 위한 값
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Float</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".isSmallWindow"><span class="type-signature">&lt;private, static> </span>isSmallWindow()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        모달 영역이 브라우저 보다 높이값이 크면 모달 영역이 하단에 붙여서 엉성하게 나오는 것에 대한 처리를 하기 위함
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    모달 영역의 높이값이 브라우저 창보다 큰지 안큰지
-</div>
-
 
 
 <dl>
@@ -693,7 +521,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".open"><span class="type-signature">&lt;static> </span>open(id)</h4>
+    <h4 class="name" id=".goToPosition"><span class="type-signature">&lt;static> </span>goToPosition(value, callback)</h4>
     
     
 </dt>
@@ -701,7 +529,7 @@
 
     
     <div class="description">
-        모달창 오픈
+        Y값으로 위치 이동
     </div>
     
 
@@ -736,13 +564,13 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>value</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="String.html">String</a></span>
+<span class="param-type">Int</span>
 
 
 
@@ -753,7 +581,31 @@
 
             
 
-            <td class="description last">DOM ID</td>
+            <td class="description last">해당 위치로 이동</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">위치 이동 후 Callback</td>
         </tr>
 
     
@@ -817,19 +669,11 @@
     
 </dd>
 
-        </dl>
-    
-
-    
-
-    
-        <h3 class="subsection-title">Events</h3>
-
-        <dl>
+        
             
 <hr>
 <dt>
-    <h4 class="name" id=".event:%5Ba%5D%EB%AA%A8%EB%8B%AC%EC%B0%BD%EB%8B%AB%EA%B8%B0">[a] 모달창 닫기</h4>
+    <h4 class="name" id=".ie8PNGFix"><span class="type-signature">&lt;static> </span>ie8PNGFix($DOM)</h4>
     
     
 </dt>
@@ -837,7 +681,7 @@
 
     
     <div class="description">
-        모달 레이어 팝업 닫기
+        익스플로러 8 이하에서 그림자가 있는 PNG 파일 로딩 시 깨짐 현상 방지
     </div>
     
 
@@ -847,16 +691,10 @@
 
     
     
+        <h5>Parameters:</h5>
+        
 
-    
-<dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -878,13 +716,13 @@
 
         <tr>
             
-                <td class="name"><code>href</code></td>
+                <td class="name"><code>$DOM</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="String.html">String</a></span>
+<span class="param-type">$DOM</span>
 
 
 
@@ -895,14 +733,17 @@
 
             
 
-            <td class="description last">Target ID</td>
+            <td class="description last">이미지 태그</td>
         </tr>
 
     
     </tbody>
 </table>
-</dl>
 
+    
+
+    
+<dl class="details">
     
 
 	
@@ -952,12 +793,6 @@
     
 
     
-
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">&lt;a href=&quot;#&quot; data-rel=&quot;back&quot;&gt;닫기&lt;/a&gt;</pre>
-
 
     
 </dd>
@@ -966,7 +801,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".event:%5Ba%5D%EB%AA%A8%EB%8B%AC%EC%B0%BD%EC%97%B4%EA%B8%B0">[a] 모달창 열기</h4>
+    <h4 class="name" id=".imageLoader"><span class="type-signature">&lt;static> </span>imageLoader(arr)</h4>
     
     
 </dt>
@@ -974,7 +809,7 @@
 
     
     <div class="description">
-        모달 레이어 팝업 열기
+        이미지 경로에 대해 연결 시켜주는 기능\
     </div>
     
 
@@ -984,16 +819,10 @@
 
     
     
+        <h5>Parameters:</h5>
+        
 
-    
-<dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1015,13 +844,13 @@
 
         <tr>
             
-                <td class="name"><code>href</code></td>
+                <td class="name"><code>arr</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="String.html">String</a></span>
+<span class="param-type"><a href="Array.html">Array</a></span>
 
 
 
@@ -1032,94 +861,13 @@
 
             
 
-            <td class="description last">Target ID</td>
+            <td class="description last">이미지 URL</td>
         </tr>
 
     
     </tbody>
 </table>
-</dl>
 
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">&lt;a href=&quot;#target&quot; data-toggle=&quot;modal&quot;&gt;모달창 오픈&lt;/a&gt;</pre>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".event:%5Bdevelop%5D%EB%8B%A4%EC%A4%91%EB%AA%A8%EB%8B%AC%EC%B0%BD%EB%8B%AB%EA%B8%B0">[develop] 다중 모달창 닫기</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        다중 모달 레이어 팝업 이용 시 필요 한 data-target 속성의 꼬임방지를 위한 것
-    </div>
-    
-
-    
-
-    
-
-    
     
 
     
@@ -1173,169 +921,39 @@
     
 
     
-
+    <h5>Returns:</h5>
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">&lt;a href=&quot;#&quot; class=&quot;modal__close&quot;&gt;&lt;/a&gt;</pre>
-
-
-    
-</dd>
-
-        
             
-<hr>
-<dt>
-    <h4 class="name" id=".event:%5Bdevelop%5D%EB%A0%88%EC%9D%B4%EC%96%B4%ED%8C%9D%EC%97%85%EC%A0%84%ED%99%98">[develop] 레이어 팝업 전환</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
+<div class="param-desc">
+    Image Array
+</div>
 
 
 
-	
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Arra</span>
 
-	
 
-	
 
-	
+    </dd>
 </dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
         
-            
-<hr>
-<dt>
-    <h4 class="name" id=".event:%5Bwindow%5D%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%ED%81%AC%EA%B8%B0%EB%B3%80%EA%B2%BD">[window] 브라우저 크기 변경</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        1. 현재 오픈 된 모달 영역이 창 크기가 조절 될 시에도 중앙 위치에 맞춰지게 설정 <br>2. 브라우저 높이가 문서 높이보다 작은경우 모달 암막높이를 브라우저 높이만큼 조절
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     
 </dd>
 
         </dl>
+    
+
+    
+
     
 </article>
 
