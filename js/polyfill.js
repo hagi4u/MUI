@@ -1,32 +1,33 @@
 /**
+ * @module  polyfill
+ * @description 
  * Legacy Browser Polyfills <br>
  * 브라우저에서 미 지원하는 JavaScript 메소드들에 대한 Polyfill
- * @class 
  * @auchor: 정명학
- * @version 0.1
- * @copyright 2016 Jeong Myoung Hak
- * @license http://opensource.org/licenses/MIT MIT
+ * @example
+ * // Installation
+ * <script src="js/polyfill.js"></script>
  */
 
+/**
+ * String.trim
+ * @function trim
+ * @return {String}  변환 된 문자열
+ */
 if(typeof String.prototype.trim !== 'function') {
-  /**
-   * trim
-   * @function String.trim
-   * @return {String}  변환 된 문자열
-   */
   String.prototype.trim = function() {
     return this.replace(/^\s+|\s+$/g, ''); 
   };
 }
 
+/**
+ * Array.indexOf()
+ * @function  indexOf
+ * @param  {String} String 검사 할 문자
+ * @param  {Int} Start 시작 순서 
+ * @return {Int} 문자열 길이
+ */
 if (!Array.indexOf) {
-  /**
-   * indexOf
-   * @function Array.indexOf
-   * @param  {String} String 검사 할 문자
-   * @param  {Int} Start 시작 순서 
-   * @return {Int} 문자열 길이
-   */
   Array.prototype.indexOf = function (obj, start) {
     for (var i = (start || 0); i < this.length; i++) {
       if (this[i] == obj) {

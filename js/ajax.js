@@ -1,9 +1,12 @@
-/**
- * mui.ajax Components
- * @namespace mui.ajax
- * @inner
- */
 try{
+  /**
+   * mui.ajax Components
+   * @namespace mui.ajax
+   * @inner
+   * @example
+   * // Installation
+   * <script src="js/ajax.js"></script>
+   */
   mui.ajax = (function(mui, $, undefined){
     "use strict";
 

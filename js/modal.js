@@ -5,6 +5,9 @@ try {
    * `static` 키워드가 들어 가 있으면 실행 가능
    * @namespace  mui.modal
    * @inner
+   * @example
+   * // Installation
+   * <script src="js/modal.js"></script>
    */
   mui.modal = (function(mui, $, undefined) {
     "use strict";

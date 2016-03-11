@@ -1,3 +1,12 @@
+
+/**
+ * jQuery Mousewheel <br/>
+ * >> Replace to {@link  Events/mousewheel}
+ * @module jQuery Mousewheel
+ * @deprecated since 2015.9
+ * @version 3.1.13
+ */
+
 /*!
  * jQuery Mousewheel 3.1.13
  *

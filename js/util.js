@@ -1,14 +1,12 @@
-/*
- ** @Domain: Utility
- ** @Require: jQuery
- */
-
 try {
   /**
    * mui.util Components <br/>
    * 일부 재 사용성 있는 기능들에 대한 집합
    * @namespace mui.util
    * @inner
+   * @example
+   * // Installation
+   * <script src="js/util.js"></script>
    */
   mui.util = (function(mui, $, undefined) {
     "use strict";

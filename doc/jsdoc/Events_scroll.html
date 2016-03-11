@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>MUI Class: Sequence</title>
+	<title>MUI Namespace: Events/scroll</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -91,13 +91,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: Sequence</h1>
+	<h1 class="page-title">Namespace: Events/scroll</h1>
 <section>
 
 <header>
     
         <h2>
-        Sequence
+        Events/scroll
         </h2>
         
     
@@ -108,9 +108,71 @@
     <div class="container-overview">
     
         
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
 <hr>
 <dt>
-    <h4 class="name" id="Sequence"><span class="type-signature"></span>new Sequence(width, height, scene, speed, selector, isReplay)</h4>
+    <h4 class="name" id=".$.fn.scrollEnd"><span class="type-signature">&lt;static> </span>$.fn.scrollEnd(callback, timeout)</h4>
     
     
 </dt>
@@ -118,7 +180,7 @@
 
     
     <div class="description">
-        시퀀스 이미지에 대한 하나의 인스턴스를 생성한다.
+        스크롤 이벤트 종료 핸들러
     </div>
     
 
@@ -153,7 +215,31 @@
 
         <tr>
             
-                <td class="name"><code>width</code></td>
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">스크롤 종료 이벤트 콜백</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>timeout</code></td>
             
 
             <td class="type">
@@ -170,127 +256,7 @@
 
             
 
-            <td class="description last">한 컷의 이미지 넓이</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>height</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Int</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">한 컷의 이미지 높이</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>scene</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Int</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">컷 갯수</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>speed</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Int</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">ms 단위의 컷 당 변화 시간</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>selector</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">DOM</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">background-image 로 지정되어 있는 DOM</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>isReplay</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">반복재생 여부</td>
+            <td class="description last">콜백 실행 Delay (ms)</td>
         </tr>
 
     
@@ -304,13 +270,6 @@
     
 
 	
-	<dt class="tag-version method-doc-label method-doc-details-label">Version:</dt>
-	<dd class="tag-version">
-		<ul class="dummy">
-			<li>0.1</li>
-		</ul>
-	</dd>
-	
 
 	
 
@@ -329,21 +288,7 @@
 	
 
 	
-	<dt class="tag-copyright method-doc-label method-doc-details-label">Copyright:</dt>
-	<dd class="tag-copyright">
-		<ul class="dummy">
-			<li>2016 Jeong Myoung Hak</li>
-		</ul>
-	</dd>
-	
 
-	
-	<dt class="tag-license method-doc-label method-doc-details-label">License:</dt>
-	<dd class="tag-license">
-		<ul class="dummy">
-			<li>http://opensource.org/licenses/MIT MIT</li>
-		</ul>
-	</dd>
 	
 
 	
@@ -375,408 +320,8 @@
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">// Installation&lt;script src=&quot;js/sequence.js&quot;&gt;&lt;/script&gt;</pre>
+    <pre class="sunlight-highlight-javascript">$(window).scrollEnd(function() { // do stuff}, 1500);      </pre>
 
-
-    
-</dd>
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        <dl>
-            
-<hr>
-<dt>
-    <h4 class="name" id="play"><span class="type-signature"></span>play(type, callback)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        생성된 인스턴스에 대해 순차적으로 이미지 장면 전환을 실행한다.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">한번 재생 시 "once" / 없을 시 빈값</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">한번만 재생 시 재생 종료 후 실행 될 callback</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="procedure"><span class="type-signature">&lt;private> </span>procedure()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        이미지 정면 전환에 대한 처리 함수
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="stop"><span class="type-signature"></span>stop(type, callback)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        생성된 인스턴스에 실행되고 있는 장면 전환에 대하여 중지한다.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">한번 재생 시 "once" / 없을 시 빈값</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">한번만 재생 시 재생 종료 후 실행 될 callback</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     
 </dd>
@@ -786,6 +331,254 @@
 
     
 
+    
+        <h3 class="subsection-title">Events</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id=".event:%5Bdata-toggle=%22scrollspy%22%5Dclick">[data-toggle="scrollspy"] click</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        ScrollSpy 기능
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>href</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ID</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">해당 ID를 가진 엘리먼트의 최 상단으로 이동</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">data-avoid-target</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">target 된 스크롤 시 엘리먼트의 높이값을 더함</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Examples</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Basic&lt;a href=&quot;#target&quot; data-toggle=&quot;scrollspy&quot;&gt;   target으로 이동 &lt;/a&gt;</pre>
+
+    <pre class="sunlight-highlight-javascript">// data-avoid-target 적용&lt;a href=&quot;#target&quot; data-toggle=&quot;scrollspy&quot; data-avoid-target=&quot;.gnb&quot;&gt;   target의 위치와 $(&#x27;.gnb&#x27;) 높이를 더한 값으로 이동&lt;/a&gt;</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".event:ui__scroll-topclick">ui__scroll-top click</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Scroll To Top 이벤트 핸들러 <br/>문서의 최 상단으로 올라가게 하는 기능 (700ms)
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">&lt;a role=&quot;button&quot; className=&quot;ui__scroll-top&quot;&gt;&lt;/a&gt;</pre>
+
+
+    
+</dd>
+
+        </dl>
     
 </article>
 

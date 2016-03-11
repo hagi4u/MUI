@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Namespace: modal</title>
+	<title>MUI Class: Events/mousewheel</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top ">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">Documentation</a>
+		<a class="navbar-brand" href="index.html">MUI</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -33,21 +33,28 @@
 			<li class="dropdown">
 				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="mui.html">mui</a></li><li><a href="mui.ajax.html">mui.ajax</a></li><li><a href="mui.common.html">mui.common</a></li><li><a href="mui.html#.modal">mui.modal</a></li>
+					<li><a href="Events_form.html">Events/form</a></li><li><a href="Events_scroll.html">Events/scroll</a></li><li><a href="mui.html">mui</a></li><li><a href="mui.ajax.html">mui.ajax</a></li><li><a href="mui.common.html">mui.common</a></li><li><a href="mui.modal.html">mui.modal</a></li><li><a href="mui.util.html">mui.util</a></li><li><a href="mui.validate.html">mui.validate</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-jQuery%2520Mousewheel.html">jQuery Mousewheel</a></li><li><a href="module-polyfill.html">polyfill</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Request.html">Request</a></li><li><a href="Sequence.html">Sequence</a></li>
+					<li><a href="Events_mousewheel.html">Events/mousewheel</a></li><li><a href="Request.html">Request</a></li><li><a href="Sequence.html">Sequence</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Hurl.html#event:snowball">Hurl#event:snowball</a></li>
+					<li><a href="Events_form.html#.event:inputfocusin">Events/form.event:input focusin</a></li><li><a href="Events_form.html#.event:inputfocusout">Events/form.event:input focusout</a></li><li><a href="Events_form.html#.event:inputkeypress">Events/form.event:input keypress</a></li><li><a href="Events_form.html#.event:input%255Bdata-input=%2522tel%2522%255Dkeypress">Events/form.event:input[data-input="tel"] keypress</a></li><li><a href="Events_form.html#.event:labelclick">Events/form.event:label click</a></li><li><a href="Events_scroll.html#.event:%255Bdata-toggle=%2522scrollspy%2522%255Dclick">Events/scroll.event:[data-toggle="scrollspy"] click</a></li><li><a href="Events_scroll.html#.event:ui__scroll-topclick">Events/scroll.event:ui__scroll-top click</a></li><li><a href="mui.modal.html#.event:%255Ba%255D%25EB%25AA%25A8%25EB%258B%25AC%25EC%25B0%25BD%25EB%258B%25AB%25EA%25B8%25B0">mui.modal.event:[a] 모달창 닫기</a></li><li><a href="mui.modal.html#.event:%255Ba%255D%25EB%25AA%25A8%25EB%258B%25AC%25EC%25B0%25BD%25EC%2597%25B4%25EA%25B8%25B0">mui.modal.event:[a] 모달창 열기</a></li><li><a href="mui.modal.html#.event:%255Bdevelop%255D%25EB%258B%25A4%25EC%25A4%2591%25EB%25AA%25A8%25EB%258B%25AC%25EC%25B0%25BD%25EB%258B%25AB%25EA%25B8%25B0">mui.modal.event:[develop] 다중 모달창 닫기</a></li><li><a href="mui.modal.html#.event:%255Bdevelop%255D%25EB%25A0%2588%25EC%259D%25B4%25EC%2596%25B4%25ED%258C%259D%25EC%2597%2585%25EC%25A0%2584%25ED%2599%2598">mui.modal.event:[develop] 레이어 팝업 전환</a></li><li><a href="mui.modal.html#.event:%255Bwindow%255D%25EB%25B8%258C%25EB%259D%25BC%25EC%259A%25B0%25EC%25A0%2580%25ED%2581%25AC%25EA%25B8%25B0%25EB%25B3%2580%25EA%25B2%25BD">mui.modal.event:[window] 브라우저 크기 변경</a></li>
 				</ul>
 			</li>
 			
@@ -84,15 +91,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Namespace: modal</h1>
+	<h1 class="page-title">Class: Events/mousewheel</h1>
 <section>
 
 <header>
     
         <h2>
-            <span class="ancestors"><a href="mui.html">mui</a>.</span>
-        
-        modal
+        Events/mousewheel
         </h2>
         
     
@@ -103,10 +108,126 @@
     <div class="container-overview">
     
         
-            <div class="description">mui.modal Components</div>
+<hr>
+<dt>
+    <h4 class="name" id="Events/mousewheel"><span class="type-signature"></span>new Events/mousewheel(selector, directionUpFunc, directionDownFunc)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        MouseWheel
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
         
 
         
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">document.getElement*</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>directionUpFunc</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">휠을 위로 했을 때 콜백함수</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>directionDownFunc</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">휠을 아래로 했을 때 콜백함수</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
 <dl class="details">
     
 
@@ -146,7 +267,27 @@
 </dl>
 
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
         
+    <pre class="sunlight-highlight-javascript">// Installation&lt;script src=&quot;js/events/mousewheel.js&quot;&gt;&lt;/script&gt;// Usage&lt;script&gt;  var target = document.getElementById(&#x27;target&#x27;);  var foo = new MouseWheel(target, function(){    // do stuff  }, function(){    // do stuff   })&lt;/script&gt;</pre>
+
+
+    
+</dd>
+
     
     </div>
 
@@ -169,7 +310,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".close"><span class="type-signature">&lt;static> </span>close(id)</h4>
+    <h4 class="name" id=".eventCallback"><span class="type-signature">&lt;private, static> </span>eventCallback(ev, self)</h4>
     
     
 </dt>
@@ -177,7 +318,7 @@
 
     
     <div class="description">
-        모달창 닫기
+        스크롤 이벤트 생성 후 콜백함수
     </div>
     
 
@@ -212,7 +353,31 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>ev</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Events</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>self</code></td>
             
 
             <td class="type">
@@ -229,7 +394,7 @@
 
             
 
-            <td class="description last">DOM ID</td>
+            <td class="description last">생성 당시의 This 값</td>
         </tr>
 
     
@@ -297,301 +462,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".getCloseButtonHeight"><span class="type-signature">&lt;private, static> </span>getCloseButtonHeight()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    getVerticalMiddleValue 에서 모달 닫기버튼이 모달영역 밖에 위치 할 경우, 그 높이 값
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Float</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".getHorizontalMiddleValue"><span class="type-signature">&lt;private, static> </span>getHorizontalMiddleValue()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    모달 영역이 브라우저 창 넓이 기준으로 중앙에 위치하기 위한 값
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Float</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".getVerticalMiddleValue"><span class="type-signature">&lt;private, static> </span>getVerticalMiddleValue()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    모달 영역이 브라우저 창 높이 기준으로 중앙에 위치하기 위한 값
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Float</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".isSmallWindow"><span class="type-signature">&lt;private, static> </span>isSmallWindow()</h4>
+    <h4 class="name" id=".getDirection"><span class="type-signature">&lt;private, static> </span>getDirection(delta)</h4>
     
     
 </dt>
@@ -599,109 +470,7 @@
 
     
     <div class="description">
-        모달 영역이 브라우저 보다 높이값이 크면 모달 영역이 하단에 붙여서 엉성하게 나오는 것에 대한 처리를 하기 위함
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    모달 영역의 높이값이 브라우저 창보다 큰지 안큰지
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id=".open"><span class="type-signature">&lt;static> </span>open(id)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        모달창 오픈
+        스크롤 방향 반환
     </div>
     
 
@@ -736,13 +505,13 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>delta</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">Int</span>
 
 
 
@@ -753,7 +522,7 @@
 
             
 
-            <td class="description last">DOM ID</td>
+            <td class="description last">스크롤 Delta 값</td>
         </tr>
 
     
@@ -813,6 +582,30 @@
     
 
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    1(위) or -1(아래)
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Int</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
 
     
 </dd>
@@ -865,7 +658,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on 2016-03-07T23:46:24+09:00
+		on 2016-03-11T18:44:08+09:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

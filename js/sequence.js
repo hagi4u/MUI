@@ -7,6 +7,9 @@
  * @param {Int} speed ms 단위의 컷 당 변화 시간
  * @param {DOM} selector  background-image 로 지정되어 있는 DOM
  * @param {Boolean} isReplay 반복재생 여부
+ * @example
+ * // Installation
+ * <script src="js/sequence.js"></script>
  * @auchor: 정명학
  * @version 0.1
  * @copyright 2016 Jeong Myoung Hak
@@ -47,7 +50,7 @@ Sequence.prototype.procedure = function() {
 
 /**
  * 생성된 인스턴스에 대해 순차적으로 이미지 장면 전환을 실행한다. 
- * @function
+ * @function 
  * @param  {String} type 한번 재생 시 "once" / 없을 시 빈값
  * @param  {Function}  callback 한번만 재생 시 재생 종료 후 실행 될 callback
  * @public
@@ -73,7 +76,7 @@ Sequence.prototype.play = function(type, callback) {
 
 /**
  * 생성된 인스턴스에 실행되고 있는 장면 전환에 대하여 중지한다.
- * @function
+ * @function 
  * @param  {String} type 한번 재생 시 "once" / 없을 시 빈값
  * @param  {Function}  callback 한번만 재생 시 재생 종료 후 실행 될 callback
  * @public

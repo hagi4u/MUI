@@ -1,12 +1,11 @@
-/*
- ** @Domain: Validate
- ** @Require: jQuery
- */
 try {
   /**
    * mui.validate Components
    * @namespace mui.validate
    * @inner
+   * @example
+   * // Installation
+   * <script src="js/validate.js"></script>
    */
   mui.validate = (function(mui, $, undefined) {
     "use strict";

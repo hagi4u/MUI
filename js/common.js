@@ -1,6 +1,7 @@
 /** 
- * mui root namespace
+ *{@link mui.common}
  * @namespace
+ * @requires jQuery
  */
 var mui = window.mui || {};
 var console = window.console || {
@@ -14,6 +15,9 @@ try {
    * @param  {Object} mui        mui Objects
    * @param  {Object} $          jQuery
    * @param  {Object} undefined Undefined
+   * @example
+   * // Installation
+   * <script src="js/common.js"></script>
    */
   mui.common = (function(mui, $, undefined) {
     "use strict";
