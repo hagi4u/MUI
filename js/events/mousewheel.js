@@ -1,5 +1,24 @@
-;
-(function(window) {
+  /**
+   * MouseWheel
+   * @namespace Events/mousewheel
+   * @class 
+   * @param {String} selector          document.getElement*
+   * @param {Function} directionUpFunc   휠을 위로 했을 때 콜백함수
+   * @param {Function} directionDownFunc 휠을 아래로 했을 때 콜백함수
+   * @example
+   * // Installation
+   * <script src="js/events/mousewheel.js"></script>
+   * 
+   * // Usage
+   * <script>
+   *   var target = document.getElementById('target');
+   *   var foo = new MouseWheel(target, function(){
+   *     // do stuff
+   *   }, function(){
+   *     // do stuff 
+   *   })
+   * </script>
+   */
   function MouseWheel(selector, directionUpFunc, directionDownFunc) {
     var self = this;
 
@@ -18,10 +37,12 @@
     this.isDownFunction = directionDownFunc;
   };
 
-  /*
-   * @method: eventCallback
-   * @param: event, constructor
-   * @desc: 스크롤 이벤트 추가 후 콜백함수 실행
+  /**
+   * 스크롤 이벤트 생성 후 콜백함수
+   * @function Events/mousewheel.eventCallback
+   * @private
+   * @param  {Event} ev   Events
+   * @param  {String} self 생성 당시의 This 값
    */
   MouseWheel.prototype.eventCallback = function(ev, self) {
     ev.preventDefault();
@@ -43,10 +64,12 @@
     }
   };
 
-  /*
-   * @method: eventCallback
-   * @param: delta
-   * @desc: 스크롤 방향값 반환 (위, 아래)
+  /**
+   * 스크롤 방향 반환
+   * @function Events/mousewheel.getDirection
+   * @private
+   * @param  {Int} delta 스크롤 Delta 값
+   * @return {Int}       1(위) or -1(아래)
    */
   MouseWheel.prototype.getDirection = function(delta){
     if(delta > 0){
@@ -56,5 +79,3 @@
     }
   }
   
-  window.MouseWheel = MouseWheel;
-})(window);
