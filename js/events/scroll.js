@@ -4,28 +4,6 @@
 */
 try{
   (function(mui, $, undefined){
-    /*
-    ** @event: Scrolling
-    ** @desc: 모바일 버전에서 사용되는 Scroll To Top
-    */
-    var uiScrollTop = $('.ui__scroll-top');  
-
-    if(uiScrollTop.length > 0){
-      $('a', uiScrollTop).click(function(e){
-        e.preventDefault();
-        $('html, body').animate({scrollTop: 0 + "px"}, 700);
-      });
-
-      $(window).on("scroll", function () { 
-        if($(window).scrollTop() > window.outerHeight / 2)
-          uiScrollTop.fadeIn();
-        else 
-          uiScrollTop.fadeOut();
-      });
-      $(window).scrollEnd(function(){
-        uiScrollTop.fadeOut();
-      }, 1500);
-    }
 
     /*
     ** @event: End Scroll
@@ -69,6 +47,28 @@ try{
 
       mui.util.goToPosition(value);   
     });
+    /*
+    ** @event: Scrolling
+    ** @desc: 모바일 버전에서 사용되는 Scroll To Top
+    */
+    var uiScrollTop = $('.ui__scroll-top');  
+
+    if(uiScrollTop.length > 0){
+      $('a', uiScrollTop).click(function(e){
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 0 + "px"}, 700);
+      });
+
+      $(window).on("scroll", function () { 
+        if($(window).scrollTop() > window.outerHeight / 2)
+          uiScrollTop.fadeIn();
+        else 
+          uiScrollTop.fadeOut();
+      });
+      $(window).scrollEnd(function(){
+        uiScrollTop.fadeOut();
+      }, 1500);
+    }
   })(mui, $, undefined);
 
 }catch(e){

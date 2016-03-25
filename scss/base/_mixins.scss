@@ -4,14 +4,6 @@
 // ----------------------------------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------------------------------
-// Set width for percentage
-// usage : @include set-width(300px) = [ 300px / design-draft * 100% ]
-// ----------------------------------------------------------------------------------------------------
-@mixin set-width($width, $wrap-width : $design-width){ 
-	width: ($width / $wrap-width) * 100%;
-}
-
-// ----------------------------------------------------------------------------------------------------
 // Opacity
 // usage : @include opacity(0.7)
 // ----------------------------------------------------------------------------------------------------
@@ -28,22 +20,9 @@
 }
 
 // ----------------------------------------------------------------------------------------------------
-// FullPage Layout
-// usage : @include fully-layout($type)
-// ----------------------------------------------------------------------------------------------------
-
-@mixin fully-layout($type) {
-  position: $type;
-  top:0;right:0;bottom:0;left:0;
-}
-
-// ----------------------------------------------------------------------------------------------------
-// FullPage Layout
+// 퍼센트 환산
 // usage : @include calc-percent($value)
 // ----------------------------------------------------------------------------------------------------
-@function calc-percent($value, $design-width){
-  @return ($value / $design-width) * 100%;
-}
 @function getPercent($value, $design-width){
   @return ($value / $design-width) * 100%;
 }
@@ -54,15 +33,6 @@
 @function rem($target) {
     @return ($target / $root-em) * 1rem;
 }
-
-//
-// 각 페이지별 백그라운드 이미지
-//
-//
-@mixin page-background($url){
-  background:transparent url($url) no-repeat top center;
-}
-
 
 // ----------------------------------------------------------------------------------------------------
 // 커스텀 체크박스 (mixin)
@@ -80,7 +50,7 @@
   border: 0;
 }
 
-@mixin checkbox($url, $width, $height){
+@mixin checkbox($url, $width, $height, $isMobile: false){
   padding-left: $width;
   height: $height;
   display: inline-block;
@@ -94,47 +64,100 @@
   &.disabled{
     background-position:0 (-$height*2);
   }
+
+  @if $isMobile == true {
+    background-size:$width;
+
+    img{
+      width:auto;
+    }
+    @each $viewport in $viewport-array {
+      @include breakpoint-max($viewport) {
+        $each-width: floor( $width / ($design-width / $viewport)) - 2;
+        display: inline-block;
+        
+        padding-left: $each-width;
+        height: $each-width;
+        
+        background-image:url($url);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: $each-width;
+        
+        cursor: pointer;
+        &.checked{
+          background-position:0 (-$each-width);
+        }
+        &.disabled{
+          background-position:0 (-$each-width*2);
+        }
+        img {
+          height: $each-width;
+        }
+      }
+    }
+
+  }
 }
 
 @mixin checkbox-responsive($url, $width, $ratio : 100%){
 
   display: block;
-  font-size:0;
-  line-height:1;
 
   & > i,
   & > img{
     display:inline-block;
   }
-
   & > i{
     width : $width;
     background:transparent url($url) no-repeat;
     background-position:0 0;
-    background-size:100%;
+    background-size:$width;
     cursor:pointer;
   }
   
   & > i:after{
-      padding-bottom:$ratio;
+      padding-bottom:$width;
       content:'';
       display:block;
   }
 
   &.checked > i{
-    background-position:0 100%;    
+    background-position:0 (-$width);
+  }
+  &.disabled > i{
+    background-position:0 (-$width*2);
   }
 
-}
 
-// ----------------------------------------------------------------------------------------------------
-// 웹 접근성 (글씨 숨기기)
-// usage : @include hide-text
-// ----------------------------------------------------------------------------------------------------
-@mixin hide-text{
-    overflow:hidden;
-    text-indent:-9000px;
-    display:block;
+  @each $viewport in $viewport-array {
+    @include breakpoint-max($viewport) {
+      $each-width: floor( $width / ($design-width / $viewport)) - 2;
+      & > i{
+        width : $each-width;
+        background:transparent url($url) no-repeat;
+        background-position:0 0;
+        background-size:$each-width;
+        cursor:pointer;
+      }
+      
+      & > i:after{
+          padding-bottom:$each-width;
+          content:'';
+          display:block;
+      }
+
+      &.checked > i{
+        background-position:0 (-$each-width);
+      }
+      &.disabled > i{
+        background-position:0 (-$each-width*2);
+      }
+    }
+  }
+
+  
+
 }
 
 //----------------------------------------------------------------------------------------------------
@@ -154,6 +177,7 @@
         }
     }
 }
+
 // ----------------------------------------------------------------------------------------------------
 // 클리어픽스
 // usage : @include 
@@ -361,3 +385,5 @@
     list-style:none;
   }
 }
+
+@import 'mixins/layout';

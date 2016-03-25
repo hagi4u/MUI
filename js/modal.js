@@ -92,6 +92,9 @@ try{
       tmpPos = $(window).scrollTop();
       $('#viewport').css('top', tmpPos * -1);
 
+      
+      $("input,select,radio,checkbox").blur();
+      
       if(mui.modal.openMotion === '')
         mui.modal.openMotion = 'modal-scale';
 
@@ -123,9 +126,9 @@ try{
               });
             }, 100);
           }
-          $modalBackdrop.height($(document).innerHeight()).show();
         }
         
+        $modalBackdrop.height($(document).innerHeight()).show();
         $('body').append($modalBackdrop).addClass('modal-open');
 
         $el.removeAttr('style').fadeIn('fast');
@@ -163,7 +166,7 @@ try{
       if($('body').hasClass('modal-open'))
         $('body').removeClass('modal-open').css('overflow', 'auto');
       */
-
+     
       $('body .modal-backdrop').fadeOut(100, function(){
         $('body').removeClass('modal-open');
 
@@ -175,8 +178,7 @@ try{
 
       ref = false;
     };
-
-
+    
     /*
     ** @event: 모달 오픈
     ** @anchor: 정명학
@@ -225,6 +227,23 @@ try{
       closeModal(target);
     });
 
+    /**
+     * @event: 레이어팝업 영역 이 외 클릭 시 액션
+     */
+    $modal.on('click', function(e){
+      /**
+       * 레이어 팝업에서 창 닫을 시 각각의 레이어 팝업 성향에 따라 액션이 다르기 때문에 trigger 로 대체
+       */
+      $(this).find('[data-rel="back"]').trigger('click');
+    });
+
+    /**
+     * @event 레이어팝업 내부 클릭 시 이벤트 버블현상 제거
+     */
+    $('.modal-content').on('click',function(e){
+      e.stopPropagation();
+    });
+
     /*
     ** @event: data-target 이 꼬이는 현상 (X버튼 누르면 )
     ** @date: 2015.08.10
@@ -259,16 +278,26 @@ try{
       var _windowWidth = mui.common.getWindowWidth(),
             _windowHeight = mui.common.getWindowHeight();
 
-      if($modal.css('display') === "block"){
+      /**
+       * 현재 모달이 지정되어 있으면서 해당 모달이 block 형태라면 리사이징 진행
+       */
+      if( typeof $el !== "undefined" && $el.css('display') === "block"){
+        if ( $el.attr('data-view') === "full" )
+          return true;
+
         $('.modal-content', $el).delay(100).css({
           'margin-top': getVerticalMiddleValue(),
           'margin-left': getHorizontalMiddleValue(),
           'margin-bottom': $('.modal-content', $el).offset().top
         });
+
+        $(window).delay(200).scrollTop(0);
       }
 
+      /*
       if(_windowHeight < $(document).innerHeight())
         $modalBackdrop.height(_windowHeight);
+      */
     });
 
     return {

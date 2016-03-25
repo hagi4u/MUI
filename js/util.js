@@ -127,9 +127,13 @@ try {
      ** @param: $dom, int, int, int
      */
     var setBackground = function($el, wOrigin, hOrigin, minWidth) {
+      /**
+       * Scale 의 Horizontal & Vertical 에 대한 비율을 Window 크기가 아닌 상위 Element 의 크기로
+       * @date: 160322
+       */
       var
-        scaleH = $(window).innerWidth() / wOrigin,
-        scaleV = $(window).innerHeight() / hOrigin;
+        scaleH = $el.closest('div').innerWidth() / wOrigin,
+        scaleV = $el.closest('div').innerHeight() / hOrigin;
       var
         tmpW = 0,
         tmpPos = 0;
@@ -139,9 +143,16 @@ try {
       if (ratio * wOrigin < minWidth)
         ratio = minWidth / wOrigin;
 
+      /**
+       * 가로 중앙 정렬을 위한 작업
+       * @date: 160322
+       */
       $el.css({
+        position: 'absolute',
         width: ratio * wOrigin,
-        height: ratio * hOrigin
+        height: ratio * hOrigin,
+        left: '50%',
+        marginLeft: ( ratio * wOrigin ) / 2 * -1
       });
     };
 

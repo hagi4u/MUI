@@ -23,7 +23,7 @@
 			$('.tab-content', $anchorWrap).hide().removeClass('active');
 
 			$(this).addClass('active');
-			$(activeTab).fadeIn().addClass('active');
+			$(activeTab).show().addClass('active');
 			
 			return false;
 		});
