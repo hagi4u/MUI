@@ -7,25 +7,6 @@
 // ## REM 사용을 위한 Layout 구성
 html{
   font-size:$root-em;
-
-  @include breakpoint('min-width', 768px){
-    font-size:23px;
-  }
-  @include breakpoint-max(639px){
-    font-size:$root-em / ($design-width / 480px);
-  }
-  @include breakpoint-max(480px){
-    font-size:$root-em / ($design-width / 414px);
-  }
-  @include breakpoint-max(414px){
-    font-size:$root-em / ($design-width / 414px);
-  }
-  @include breakpoint-max(400px){
-    font-size:$root-em / ($design-width / 360px);
-  }
-  @include breakpoint-max(320px){
-    font-size:$root-em / ($design-width / 320px);
-  }
 }
 
 // ## Viewport
@@ -35,7 +16,6 @@ html{
   margin:0 auto;
   .inner{
     position:relative;
-    width:100%;
   }
 }
 
